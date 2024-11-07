@@ -3,9 +3,3 @@ flow.{$DOMAIN_NAME} {
       flush_interval -1
     }
 }
-
-qdrant.{$DOMAIN_NAME} {
-    reverse_proxy qdrant:6333 {
-        flush_interval -1
-    }
-}
