@@ -1,6 +1,6 @@
 # n8n-docker-caddy
 
-This template is inspired by the official n8n self-hosting guide for DigitalOcean or Hetzner, with several modifications:
+This template is inspired by the official n8n hosting guide for DigitalOcean/Hetzner, with several modifications:
 
 - PostgreSQL database instead of SQLite
 - Integration with LangSmith
