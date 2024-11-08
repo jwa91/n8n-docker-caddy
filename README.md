@@ -4,7 +4,7 @@ This template is inspired by the official n8n hosting guide for DigitalOcean/Het
 
 - PostgreSQL database instead of SQLite
 - Integration with LangSmith
-- Qdrant vector database added
+- Qdrant Vector database added
 
 See the official guides for a more detailed step by step explanation:
 
@@ -36,7 +36,13 @@ docker volume create postgres_data
 docker volume create qdrant_storage
 ```
 
-3. Create and configure your `.env` file with the following content:
+3. Configure your `.env` file
+
+```bash
+nano .env
+```
+
+..by the following content:
 
 ```env
 DATA_FOLDER=<directory-path>/n8n-docker-caddy
@@ -96,27 +102,8 @@ docker compose up -d
 - **Caddy**: Reverse proxy with automatic HTTPS
 - **n8n**: Main workflow automation platform
 - **PostgreSQL**: Database for n8n (replaces default SQLite)
-
-### AI/ML Components
-
 - **Qdrant**: Vector database for efficient similarity search and vector storage
-- **LangSmith**: Integrated for prompt monitoring and optimization
-
-## Configuration
-
-### Environment Variables
-
-| Variable           | Description                         | Required | Example                 |
-| ------------------ | ----------------------------------- | -------- | ----------------------- |
-| DATA_FOLDER        | Local path to your n8n installation | Yes      | `/opt/n8n-docker-caddy` |
-| DOMAIN_NAME        | Your domain name                    | Yes      | `example.com`           |
-| SUBDOMAIN          | Subdomain for n8n                   | Yes      | `flow`                  |
-| GENERIC_TIMEZONE   | Your timezone                       | Yes      | `Europe/Amsterdam`      |
-| POSTGRES_DB        | PostgreSQL database name            | Yes      | `n8n`                   |
-| POSTGRES_USER      | PostgreSQL username                 | Yes      | `n8n_user`              |
-| POSTGRES_PASSWORD  | PostgreSQL password                 | Yes      | `your-secure-password`  |
-| N8N_ENCRYPTION_KEY | Encryption key for n8n              | Yes      | `32-character-string`   |
-| LANGCHAIN_API_KEY  | Your LangChain API key              | Yes      | `your-api-key`          |
+- **LangSmith**: Added for prompt monitoring and optimization
 
 ## Maintenance
 
