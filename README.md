@@ -80,6 +80,8 @@ LANGCHAIN_API_KEY=your-langchain-api-key
 docker compose up -d
 ```
 
+6. To use the local QDrant Vector DB you should add qdrant credentials but leave the api key field empty, and use `http://qdrant:6333` as url.
+
 ## Directory Structure
 
 ```
